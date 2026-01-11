@@ -218,3 +218,140 @@ footer p {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* NUEVOS ESTILOS PARA LA GUÍA DEL JUGADOR */
+
+#guia {
+    scroll-margin-top: 160px;
+}
+
+.titulo-seccion {
+    margin: 200px 0 60px;
+    text-align: center;
+    font-size: 60px;
+    color: #c3954c;
+    text-shadow: 0 0 10px rgba(195, 149, 76, 0.3);
+}
+
+.guia-container {
+    max-width: 1000px;
+    margin: 0 auto 150px;
+    padding: 0 20px;
+}
+
+.guia-section {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #3a2c1a;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guia-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(195, 149, 76, 0.1);
+    border-color: #c3954c;
+}
+
+.guia-titulo {
+    background: linear-gradient(90deg, #1a1a1a, #2a1f0f);
+    color: #c3954c;
+    padding: 20px 30px;
+    margin: 0;
+    font-size: 24px;
+    border-bottom: 1px solid #3a2c1a;
+    font-family: 'MedievalSharp', cursive;
+}
+
+.guia-content {
+    padding: 25px 30px;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.guia-content p {
+    margin-bottom: 15px;
+}
+
+.guia-content ul {
+    margin: 15px 0 15px 20px;
+    padding-left: 20px;
+}
+
+.guia-content li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.guia-content li::before {
+    content: "•";
+    color: #c3954c;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+.guia-content strong {
+    color: #c3954c;
+    font-weight: 600;
+}
+
+.guia-content code {
+    background: rgba(195, 149, 76, 0.1);
+    color: #ffcc80;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #3a2c1a;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.guia-content em {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Responsive para la guía */
+@media (max-width: 768px) {
+    .titulo-seccion {
+        font-size: 40px;
+        margin: 100px 0 40px;
+    }
+    
+    .guia-container {
+        padding: 0 15px;
+        margin-bottom: 100px;
+    }
+    
+    .guia-titulo {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+    
+    .guia-content {
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
+/* Ajuste en el header para el nuevo enlace */
+.header__nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
