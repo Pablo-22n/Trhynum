@@ -342,3 +342,183 @@ footer p {
     font-size: 18px;
     font-weight: 600;
 }
+
+.imagen-centrada {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo para la imagen */
+.imagen-ejemplo {
+    max-width: 100%;
+    width: 300px;
+    
+}
+
+
+/* Responsive para la imagen */
+@media (max-width: 768px) {
+    .item-imagen {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+.card {
+    width: 320px;
+    padding: 25px !important;
+    background: rgba(20, 20, 20, 0.85) !important;
+    border: 2px solid #3a2c1a !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: left !important;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #c3954c;
+    transition: width 0.3s ease;
+}
+
+.card h3 {
+    color: #c3954c !important;
+    font-size: 22px !important;
+    margin-bottom: 15px !important;
+    text-align: left !important;
+    padding-left: 10px !important;
+}
+
+.card p {
+    color: #e0e0e0 !important;
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    text-align: left !important;
+    padding-left: 10px !important;
+}
+
+
+
+.btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 22px 30px 22px 90px;
+    background: linear-gradient(135deg, #0056cc, #003d99);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #003d99;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn img {
+    position: absolute;
+    left: 15px;
+    height: 65px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover img {
+    transform: scale(1.1);
+}
+
+.btn span {
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.btn--mega {
+    background: linear-gradient(135deg, #cc0000, #990000);
+    border-color: #990000;
+}
+
+.btn--mega:hover {
+    background: linear-gradient(135deg, #ff0000, #b30000);
+}
+
+/* Responsive mejorado */
+@media (max-width: 1024px) {
+    .layout {
+        gap: 80px;
+    }
+    
+    .card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-descargas {
+        font-size: 50px;
+        margin: 150px 0 60px;
+    }
+    
+    .layout {
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+    }
+    
+    .requisitos {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .card {
+        width: 100%;
+    }
+    
+    #descargas {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .btn {
+        padding: 20px 25px 20px 80px;
+        font-size: 16px;
+    }
+    
+    .btn img {
+        height: 55px;
+    }
+}
+
+
+
+
+
+
+
+
