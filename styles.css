@@ -517,8 +517,298 @@ footer p {
 
 
 
+.staff-simple-container {
+    max-width: 800px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+.categoria-simple {
+    text-align: center;
+}
+
+.categoria-titulo-simple {
+    color: #c3954c;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.categoria-titulo-simple::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: #c3954c;
+}
+
+/* Lista de miembros */
+.miembros-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.miembro-simple-item {
+    text-align: center;
+}
+
+.miembro-nombre-completo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.5px;
+}
+
+.miembro-puesto-simple {
+    color: #c3954c;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .staff-simple-container {
+        gap: 50px;
+        margin-bottom: 80px;
+    }
+    
+    .categoria-titulo-simple {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .miembro-nombre-completo {
+        font-size: 20px;
+    }
+    
+    .miembro-puesto-simple {
+        font-size: 16px;
+    }
+    
+    .miembros-simple {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoria-titulo-simple {
+        font-size: 24px;
+    }
+    
+    .miembro-nombre-completo {
+        font-size: 18px;
+    }
+    
+    .miembro-puesto-simple {
+        font-size: 15px;
+    }
+}
+
+
+footer {
+    padding: 20px;
+    background: #000;
+    border-top: 1px solid #333;
+    width: 100%;
+}
+
+.footer-minimal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    color: #aaa;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-dev {
+    color: #aaa;
+    font-size: 14px;
+    margin: 0;
+}
+
+.dev-link {
+    color: #c3954c;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 2px;
+}
+
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+    
+    .footer-minimal {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer-copyright,
+    .footer-dev {
+        font-size: 13px;
+    }
+}
 
 
 
+/* BOTÓN FLOTANTE DE DISCORD - COLOR DISCORD SIN SOMBRA */
+.discord-clean {
+    position: fixed;
+    bottom: 80px; /* Más arriba para no tapar el footer */
+    right: 30px;
+    background: #5865F2; /* Color oficial de Discord */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    border: 2px solid #4752c4;
+    /* Sin sombra como pediste */
+    box-shadow: none;
+}
 
+.discord-clean img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
 
+.discord-clean:hover {
+    background: #4752c4;
+    transform: translateY(-5px);
+    border-color: #3a45b2;
+    /* Solo una sombra muy sutil al hover si quieres, sino elimínala */
+    box-shadow: 0 5px 15px rgba(88, 101, 242, 0.3);
+}
+
+/* Opción completamente sin sombras */
+.discord-noshadow {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    background: #5865F2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    border: 2px solid #4752c4;
+    /* Completamente sin sombras */
+    box-shadow: none !important;
+}
+
+.discord-noshadow:hover {
+    background: #4752c4;
+    transform: translateY(-5px);
+    border-color: #3a45b2;
+    /* También sin sombra en hover */
+    box-shadow: none !important;
+}
+
+.discord-noshadow img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+/* Opción solo ícono (sin texto) */
+.discord-icon-only {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    background: #5865F2;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 2px solid #4752c4;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discord-icon-only img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.discord-icon-only:hover {
+    background: #4752c4;
+    transform: translateY(-5px) scale(1.1);
+    border-color: #3a45b2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .discord-clean,
+    .discord-noshadow {
+        bottom: 70px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .discord-clean img,
+    .discord-noshadow img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* En móviles, ocultar texto si prefieres */
+    .discord-clean span,
+    .discord-noshadow span {
+        display: none;
+    }
+    
+    .discord-clean,
+    .discord-noshadow {
+        padding: 12px;
+        border-radius: 50%;
+    }
+    
+    .discord-icon-only {
+        bottom: 70px;
+        right: 20px;
+        padding: 12px;
+    }
+    
+    .discord-icon-only img {
+        width: 24px;
+        height: 24px;
+    }
+}
